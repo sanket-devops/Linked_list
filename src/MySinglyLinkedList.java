@@ -36,33 +36,6 @@ class MySinglyLinkedList<T> {
     }
 
     /**
-     * remove greater than given value.
-     *
-     * @param value
-     */
-    void deleteGT(Integer value) {
-        SingleNode prev = start;
-        SingleNode current = start;
-        SingleNode next = start;
-        while (next != null) {
-            prev = current;
-            current = next;
-            next = next.getNextLink();
-
-            if (Integer.parseInt(current.dataItem.toString()) > value) {
-                prev.nextLink = current.getNextLink();
-                if (start == current) {
-                    start = current.getNextLink();
-                }
-                if (end == current) {
-                    end = current.getNextLink();
-                }
-                size--;
-            }
-        }
-    }
-
-    /**
      * remove last item of list.
      */
     public void remove() {

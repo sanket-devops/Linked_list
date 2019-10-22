@@ -11,7 +11,6 @@ public class main {
         list.remove(); // remove tail element.
         list.displayAll();
 
-        list.deleteGT(50);
         list.displayAll();
     }
 }
